@@ -15,7 +15,7 @@ public enum BoostDirection { right, left, up }
     {
         if (other.attachedRigidbody)
         {
-            Debug.Log(other.name.ToString());
+
             switch (_boostDirection)
             {
                 case BoostDirection.right:
