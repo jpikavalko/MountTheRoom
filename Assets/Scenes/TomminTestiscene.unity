@@ -3136,7 +3136,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1930411515, guid: 3122a322b36aa6d4ab87b15d56319356, type: 3}
       propertyPath: pullForce
-      value: 200
+      value: 100
       objectReference: {fileID: 0}
     - target: {fileID: 908589100189138522, guid: 3122a322b36aa6d4ab87b15d56319356,
         type: 3}
@@ -3212,6 +3212,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_Drag
       value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 908589100336104140, guid: 3122a322b36aa6d4ab87b15d56319356,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 908589100345962161, guid: 3122a322b36aa6d4ab87b15d56319356,
         type: 3}
@@ -4291,7 +4296,7 @@ PrefabInstance:
     - target: {fileID: 5545323557197989485, guid: 8d31249bc50681640b668c944231cd56,
         type: 3}
       propertyPath: m_IsKinematic
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5545323557197989485, guid: 8d31249bc50681640b668c944231cd56,
         type: 3}

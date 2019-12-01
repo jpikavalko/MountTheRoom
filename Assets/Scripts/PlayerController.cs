@@ -56,8 +56,11 @@ public class PlayerController : MonoBehaviour
 
     private void FixedUpdate()
     {
-        MoveHand(leftHand, new Vector3(leftHorizontal, -leftVertical, 0));
+        //MoveHand(leftHand, new Vector3(leftHorizontal, -leftVertical, 0));
+        //MoveHand(rightHand, new Vector3(leftHorizontal, -leftVertical, 0));
         MoveHand(rightHand, new Vector3(rightHorizontal, -rightVertical, 0));
+        MoveHand(leftHand, new Vector3(rightHorizontal, -rightVertical, 0));
+        MoveTorso();
 
         Debug.DrawLine(target.position, torso.position, Color.green);
     }
@@ -66,6 +69,12 @@ public class PlayerController : MonoBehaviour
     {
         direction = main.transform.TransformDirection(direction);
         hand.AddForce(direction * pullForce);
+    }
+
+    private void MoveTorso()
+    {
+        torso.AddForce(-Vector3.forward * leftVertical * 300f);
+        torso.AddForce(main.transform.TransformDirection(new Vector3(leftHorizontal, 0f, 0f) * 50f));
     }
 
     private void Jump()
