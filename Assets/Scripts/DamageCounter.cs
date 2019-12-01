@@ -6,6 +6,8 @@ public class DamageCounter : MonoBehaviour
 {
 
     Dictionary<Player, float> _playerTotalDamage = new Dictionary<Player, float>();
+    public TMPro.TMP_Text _oswaldDamage;
+    public TMPro.TMP_Text _topDMGtext;
     public static DamageCounter instance = null;
     bool _dmgTaken = false;
     float _topDMG = 0f;
@@ -32,8 +34,11 @@ public class DamageCounter : MonoBehaviour
             foreach (KeyValuePair<Player, float> item in _playerTotalDamage)
             {
                 _dmgText += item.Key._playerName + " damage taken: " + item.Value;
+
+                if (item.Key._playerName == "Oswald") _oswaldDamage.text = ((int)item.Value).ToString();
             }
-            Debug.Log(_dmgText);
+
+            _dmgTaken = false;
         }    
     }
 
@@ -50,7 +55,7 @@ public class DamageCounter : MonoBehaviour
         if (dmg > _topDMG)
         {
             _topDMG = dmg;
-            //Debug.Log("Top Damage!! " + _topDMG);
+            _topDMGtext.text = Mathf.RoundToInt(_topDMG).ToString();
         }
         
         if (_playerTotalDamage != null)
