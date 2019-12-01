@@ -22,9 +22,12 @@ public class PlayerController : MonoBehaviour
 
     private bool isJumpPressed;
 
+    Camera main;
+
 
     void Start()
     {
+        main = Camera.main;
         InvokeRepeating("LousyExuceOfATimer", 1f, 0.1f);
     }
 
@@ -61,6 +64,7 @@ public class PlayerController : MonoBehaviour
 
     private void MoveHand(Rigidbody hand, Vector3 direction)
     {
+        direction = main.transform.TransformDirection(direction);
         hand.AddForce(direction * pullForce);
     }
 
