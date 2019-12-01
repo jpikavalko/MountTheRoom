@@ -44,8 +44,16 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 977864205, guid: 3122a322b36aa6d4ab87b15d56319356, type: 3}
+      propertyPath: m_Size.x
+      value: 0.0010444684
+      objectReference: {fileID: 0}
+    - target: {fileID: 977864205, guid: 3122a322b36aa6d4ab87b15d56319356, type: 3}
       propertyPath: m_Size.y
       value: 0.0017460387
+      objectReference: {fileID: 0}
+    - target: {fileID: 977864205, guid: 3122a322b36aa6d4ab87b15d56319356, type: 3}
+      propertyPath: m_Size.z
+      value: 0.0016700329
       objectReference: {fileID: 0}
     - target: {fileID: 977864205, guid: 3122a322b36aa6d4ab87b15d56319356, type: 3}
       propertyPath: m_Center.x
@@ -58,14 +66,6 @@ PrefabInstance:
     - target: {fileID: 977864205, guid: 3122a322b36aa6d4ab87b15d56319356, type: 3}
       propertyPath: m_Center.z
       value: -0.00012871929
-      objectReference: {fileID: 0}
-    - target: {fileID: 977864205, guid: 3122a322b36aa6d4ab87b15d56319356, type: 3}
-      propertyPath: m_Size.z
-      value: 0.0016700329
-      objectReference: {fileID: 0}
-    - target: {fileID: 977864205, guid: 3122a322b36aa6d4ab87b15d56319356, type: 3}
-      propertyPath: m_Size.x
-      value: 0.0010444684
       objectReference: {fileID: 0}
     - target: {fileID: 1565055951, guid: 3122a322b36aa6d4ab87b15d56319356, type: 3}
       propertyPath: m_IsTrigger
@@ -80,24 +80,12 @@ PrefabInstance:
       value: 0.0013614821
       objectReference: {fileID: 0}
     - target: {fileID: 1565055951, guid: 3122a322b36aa6d4ab87b15d56319356, type: 3}
-      propertyPath: m_Center.x
-      value: 0.00020469965
+      propertyPath: m_Center.y
+      value: 0.002731703
       objectReference: {fileID: 0}
     - target: {fileID: 1565055951, guid: 3122a322b36aa6d4ab87b15d56319356, type: 3}
       propertyPath: m_Center.z
       value: -0.00006431395
-      objectReference: {fileID: 0}
-    - target: {fileID: 1565055951, guid: 3122a322b36aa6d4ab87b15d56319356, type: 3}
-      propertyPath: m_Center.y
-      value: 0.002731703
-      objectReference: {fileID: 0}
-    - target: {fileID: 1930411515, guid: 3122a322b36aa6d4ab87b15d56319356, type: 3}
-      propertyPath: target
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1930411515, guid: 3122a322b36aa6d4ab87b15d56319356, type: 3}
-      propertyPath: pullForce
-      value: 200
       objectReference: {fileID: 0}
     - target: {fileID: 1930411515, guid: 3122a322b36aa6d4ab87b15d56319356, type: 3}
       propertyPath: jumpForce

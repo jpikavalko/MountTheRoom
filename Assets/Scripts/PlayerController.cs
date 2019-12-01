@@ -4,7 +4,10 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    public Transform target;
+    public enum PLAYER { ONE, TWO }
+    public PLAYER player;
+
+    public Transform jumpTarget;
 
     public Rigidbody leftHand,
                      rightHand,
@@ -38,14 +41,28 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        leftHorizontal  = Input.GetAxis("LeftHorizontal");
-        rightHorizontal = Input.GetAxis("RightHorizontal");
-        leftVertical    = Input.GetAxis("LeftVertical");
-        rightVertical   = Input.GetAxis("RightVertical");
+        if (player == PLAYER.ONE)
+        {
+            leftHorizontal  = Input.GetAxis("LeftHorizontal");
+            rightHorizontal = Input.GetAxis("RightHorizontal");
+            leftVertical    = Input.GetAxis("LeftVertical");
+            rightVertical   = Input.GetAxis("RightVertical");
 
-        isJumpPressed   = Input.GetButton("Jump");
-        isLeftGrabbing  = Input.GetButton("LeftGrab");
-        isRightGrabbing = Input.GetButton("RightGrab");
+            isJumpPressed   = Input.GetButton("Jump");
+            isLeftGrabbing  = Input.GetButton("LeftGrab");
+            isRightGrabbing = Input.GetButton("RightGrab");
+        }
+        else if (player == PLAYER.TWO)
+        {
+            leftHorizontal = Input.GetAxis("LeftHorizontal2");
+            rightHorizontal = Input.GetAxis("RightHorizontal2");
+            leftVertical = Input.GetAxis("LeftVertical2");
+            rightVertical = Input.GetAxis("RightVertical2");
+
+            isJumpPressed = Input.GetButton("Jump2");
+            isLeftGrabbing = Input.GetButton("LeftGrab2");
+            isRightGrabbing = Input.GetButton("RightGrab2");
+        }
     }
 
     int a = 15;
@@ -104,7 +121,7 @@ public class PlayerController : MonoBehaviour
 
     private void Jump()
     {
-        Vector3 direction = (target.position - torso.position).normalized;
+        Vector3 direction = (jumpTarget.position - torso.position).normalized;
         torso.AddForce(direction * jumpForce);
         
     }
