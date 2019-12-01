@@ -16,9 +16,9 @@ public class RigidbodyDamage : MonoBehaviour
     {
         float dmg = collision.impulse.magnitude;
 
-        if(collision.impulse.magnitude >= 100f)
+        if(collision.impulse.magnitude >= 30f)
         {
-            Debug.Log(transform.name + " Damage: " + dmg);
+            //Debug.Log(transform.name + " Damage: " + dmg);
 
             DamageCounter.instance.TakeDamage(_parentPlayer, dmg);
         }

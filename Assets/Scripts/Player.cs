@@ -16,4 +16,9 @@ public class Player : MonoBehaviour
             _playerRigidbodies[i].gameObject.AddComponent<RigidbodyDamage>();
         }
     }
+
+    private void Start()
+    {
+        DamageCounter.instance.AddPlayer(this);
+    }
 }
