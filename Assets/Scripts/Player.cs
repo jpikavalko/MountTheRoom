@@ -13,7 +13,7 @@ public class Player : MonoBehaviour
 
         for (int i = 0; i < _playerRigidbodies.Length; i++)
         {
-            _playerRigidbodies[i].gameObject.AddComponent<RigidbodyDamage>();
+            _playerRigidbodies[i].gameObject.AddComponent<RigidbodyDamage>().SetupRigidbodyDamage(this);
         }
     }
 

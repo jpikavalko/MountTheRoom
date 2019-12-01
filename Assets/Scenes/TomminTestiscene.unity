@@ -3157,6 +3157,10 @@ PrefabInstance:
       propertyPath: pullForce
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 1930411515, guid: 3122a322b36aa6d4ab87b15d56319356, type: 3}
+      propertyPath: jumpTarget
+      value: 
+      objectReference: {fileID: 130573919}
     - target: {fileID: 908589100189138522, guid: 3122a322b36aa6d4ab87b15d56319356,
         type: 3}
       propertyPath: m_Layer

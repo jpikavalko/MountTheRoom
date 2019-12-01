@@ -31,7 +31,7 @@ public class DamageCounter : MonoBehaviour
 
             foreach (KeyValuePair<Player, float> item in _playerTotalDamage)
             {
-                _dmgText += item.Key._playerName + " ";
+                _dmgText += item.Key._playerName + " damage taken: " + item.Value;
             }
             Debug.Log(_dmgText);
         }    
@@ -50,17 +50,14 @@ public class DamageCounter : MonoBehaviour
         if (dmg > _topDMG)
         {
             _topDMG = dmg;
-            Debug.Log("Top Damage!! " + _topDMG);
+            //Debug.Log("Top Damage!! " + _topDMG);
         }
         
-
-        /*
         if (_playerTotalDamage != null)
         {
-            float temp = _playerTotalDamage[p] + dmg;
-            _playerTotalDamage[p] = dmg;
+            _playerTotalDamage[p] += dmg;
             _dmgTaken = true;
         }
-        */
+        
     }
 }
