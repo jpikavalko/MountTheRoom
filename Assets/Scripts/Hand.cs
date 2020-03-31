@@ -32,6 +32,6 @@ public class Hand : MonoBehaviour
 
     public GameObject GetItemInHand()
     {
-        return itemInHand != null ? itemInHand : null;   
+        return itemInHand;   
     }
 }
